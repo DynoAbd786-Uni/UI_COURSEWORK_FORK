@@ -44,10 +44,20 @@ Core::Core(const CoreArgs& args)
     m_Users[2].SetUsername("Sarah");
     m_Users[2].SetEmail("sarah@example2.com");
 
+    m_Users[3] = User();
+    m_Users[3].SetUsername("Mustafa");
+    m_Users[3].SetEmail("my@example.com");
+
+    m_Users[4] = User();
+    m_Users[4].SetUsername("Oliver");
+    m_Users[4].SetEmail("olly@yandex.ru");
+
     // Add friends to user
     m_User->AddFriend(&m_Users[0]);
     m_User->AddFriend(&m_Users[1]);
     m_User->AddFriend(&m_Users[2]);
+    m_User->AddFriend(&m_Users[3]);
+    m_User->AddFriend(&m_Users[4]);
 
     // Initialise video player
 #ifdef _WIN32
