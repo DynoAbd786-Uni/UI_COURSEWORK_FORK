@@ -100,19 +100,27 @@ void MainWindow::ChangePage(PageIndex page)
     emit PageChange(from, page);
 }
 
-void MainWindow::ChangeLang(QString lang)
+void MainWindow::ChangeLang(Language lang)
 {
-    if (lang == "English (GB)")
+    switch (lang)
     {
-        translator.load(":/assets/translations/staysimple_en_GB.qm");
-    }
-    else if (lang == "English (US)")
-    {
-        translator.load(":/assets/translations/staysimple_en_US.qm");
-    }
-    else if (lang == "Turkish")
-    {
-        translator.load(":/assets/translations/staysimple_tr.qm");
+        case EN_GB:
+        {
+            translator.load(":/assets/translations/staysimple_en_GB.qm");
+            break;
+        }
+
+        case EN_US:
+        {
+            translator.load(":/assets/translations/staysimple_en_US.qm");
+            break;
+        }
+
+        case TR:
+        {
+            translator.load(":/assets/translations/staysimple_tr.qm");
+            break;
+        }
     }
 
     QCoreApplication::installTranslator(&translator);

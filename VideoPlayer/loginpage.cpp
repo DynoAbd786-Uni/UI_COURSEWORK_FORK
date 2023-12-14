@@ -73,7 +73,7 @@ void LoginPage::OnLangChange(int index)
 
     QString selectedLang = ui->langBox->currentText();
     core->GetSettings()->lang = index;
-    p_MainWindow->ChangeLang(selectedLang);
+    p_MainWindow->ChangeLang(static_cast<MainWindow::Language>(index));
 }
 
 
