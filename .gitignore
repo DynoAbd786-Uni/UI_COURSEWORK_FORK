@@ -52,3 +52,7 @@ compile_commands.json
 
 *_qmlcache.qrc
 .DS_Store
+
+# VSCode
+*.vscode
+settings.json
