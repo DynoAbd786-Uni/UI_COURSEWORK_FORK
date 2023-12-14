@@ -44,12 +44,19 @@ public:
         NUM_PAGES
     };
 
+    enum Language
+    {
+        EN_GB,
+        EN_US,
+        TR
+    };
+
     /**
      * Changes the currently displayed page
      * @param page : PageIndex of what page to change to
     */
     void ChangePage(PageIndex page);
-    void ChangeLang(QString lang);
+    void ChangeLang(Language lang);
 
 signals:
     void PageChange(MainWindow::PageIndex from, MainWindow::PageIndex to);

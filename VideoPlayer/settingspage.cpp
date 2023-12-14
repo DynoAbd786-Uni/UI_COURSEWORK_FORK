@@ -63,7 +63,7 @@ void SettingsPage::OnLangChange(int index)
 
     QString selectedLang = ui->box_lang->currentText();
     core->GetSettings()->lang = index;
-    p_MainWindow->ChangeLang(selectedLang);
+    p_MainWindow->ChangeLang(static_cast<MainWindow::Language>(index));
 }
 
 // Button Clicks
