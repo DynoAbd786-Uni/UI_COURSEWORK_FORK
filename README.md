@@ -5,15 +5,8 @@ This code is a prototype for the final product. It has login, register, profile 
 ## Running the code:
 ### Qt
 Install Qt Creator with Qt 5.15
-When running the code run from the file VideoPlayer.pro
-### Command Line Arguments
-In QT (once folder is open) go to projects, run, Command line arguments:
-```bash
-# Unix
-%{sourceDir}/../assets
-# Windows
-%{sourceDir}\..\assets
-```
+When running the code run from the file **VideoPlayer.pro** in the VideoPlayer folder
+
 ### Codecs
 This project requires the gstreamer codecs to run as it uses the gstreamer library to play videos.
 #### macos:
@@ -26,6 +19,20 @@ zypper/dnf/pacman/apt install gstreamer
 ```
 #### Windows:
 No extra packages needed to run
+
+## How to use the app:
+There are videos located in the root of this directory to help you understand the currently implemented features of the app. When QtCreator is launched, there should be a configure project section, where you would put your respective C++ file to construct. There are command line arguements you need to enter inside the run section of the project, which are mentioned below.
+
+When the project has been loaded, click the green triangle at the bottom left corner to run the app. Because this is a prototype version, there are prompts outputted from the command line inside QtCreator. Ignore these, as these are test lines for us to understand the backend functionality.
+
+### Command Line Arguments
+In QT (once folder is open) go to projects, run, Command line arguments:
+```bash
+# Unix
+%{sourceDir}/../assets
+# Windows
+%{sourceDir}\..\assets
+```
 
 ## Contributing:
 - Kanban link: https://trello.com/b/F56Kiy3C/user-interfaces-board
