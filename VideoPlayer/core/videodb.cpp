@@ -30,10 +30,14 @@ VideoDB::VideoDB(std::string path_to_videos) :
 {
     // Discover videos in the directory
     // List of file extensions to look for:
-    std::vector<QString> extensions = {".MOV", ".mp4"};
+    std::vector<QString> extensions;
 #ifdef _WIN32
     extensions.push_back(".wmv");
+#else
+    extensions.push_back(".MOV");
+    extensions.push_back(".mp4");
 #endif
+
 
     QDir videos_dir = QDir(m_PathToVideos.c_str());
     if (!videos_dir.exists())
