@@ -95,7 +95,6 @@ void Post::MediaPlayerError(QMediaPlayer::Error e)
 void Post::SetPosition(int position)
 {
     m_MediaPlayer.setPosition(static_cast<qint64>(position));
-    m_MediaPlayer.play();
 }
 
 void Post::ChangeLikeButtonStatus()
